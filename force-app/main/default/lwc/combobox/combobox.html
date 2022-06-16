@@ -1,0 +1,71 @@
+
+
+   <template>
+    <template if:true={showCard}>
+    <lightning-card title="Configuration Records">
+        <lightning-button slot="actions" label="Delete" onclick={deleteRecord}></lightning-button>
+        <lightning-button slot="actions" label="Edit" onclick={EditRecord}></lightning-button>
+        <div style="height: 150px">
+            <lightning-datatable 
+                                 key-field="id"
+                                 data={recordData}
+                                 columns={columns}
+                                 hide-checkbox-column="true"
+                                 onrowaction={handleRowActions}>
+        </lightning-datatable>
+        </div>
+        <template if:true={showNextButton}>
+        <div>
+            <lightning-button class="BUTTON-Text whiteh4boldcentre slds-align_absolute-center" variant="success" label="Next" onclick={openCardHandle}></lightning-button>
+        </div>
+          </template>
+    </lightning-card>
+    <div style="height: 300px">
+    <lightning-card>
+
+        <p>Object Name-:{value}</p><br>
+        <p>Field Name-:{fieldsValue}</p>
+
+        
+            <div class="slds-m-bottom_x-large slds-theme_default slds-form-element__control green-checkbox">
+                <lightning-checkbox-group class="green-checkbox" options={selectFields} value={fieldsValue}
+                    onchange={handleSelectFields} required="true">
+                </lightning-checkbox-group>
+            </div>
+        </lightning-card>
+            </div>
+    
+    </template>
+    <template if:true={showDualBox}>
+    
+    <lightning-card  title="Fetch Fields">
+        <div>
+            <lightning-combobox
+                name="progress"
+                label="Status"
+                value={value}
+                placeholder="Select Progress"
+                options={reportOptions}
+                onchange={handleChange} ></lightning-combobox>
+    
+        <p>Selected value is: {value}</p>
+        </div>
+    <div>
+    <lightning-dual-listbox name="Fields" class="slds-m-around_small" label="Select Fields"
+      source-label="Available" selected-label="Selected" field-level-help="Select your preferred Fields"
+      options={selectFields} value={fieldsValue} onchange={handleSelectFields}>
+    </lightning-dual-listbox>
+    </div>
+    
+    <div class="Background-color-p">
+        <span class="BUTTON-Text whiteh4boldcentre slds-align_absolute-center">
+            <lightning-button variant="brand" label="Save" onclick={handleSave} ></lightning-button>  <!-- class="slds-var-m-right_medium" -->
+        </span>
+        </div>
+    
+    </lightning-card>
+    </template>
+    <div if:true={showLoadingSpinner}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </div>
+    </template>

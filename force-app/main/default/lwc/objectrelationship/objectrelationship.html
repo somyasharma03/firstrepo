@@ -1,0 +1,21 @@
+<template>
+
+    <template if:true ={data}>   
+                
+        <lightning-datatable data={data} columns={columns} key-field="Id">
+        </lightning-datatable>
+
+        <template for:each={Account.Contacts} for:item="motorIns">
+            <p key={motorIns.Id}>{motorIns.Name}</p>
+            <p key={motorIns.Id}>{motorIns.LastName}</p>
+            <p key={motorIns.Id}>{motorIns.Phone}</p>
+            <p key={motorIns.Id}>{motorIns.Email }</p>
+        </template>
+
+        
+        </template> 
+    </template>
+
+    </template>
+
+    

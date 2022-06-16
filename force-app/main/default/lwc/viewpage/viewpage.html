@@ -1,0 +1,57 @@
+<template>
+    <div class="slds-p-around_medium" >
+        <lightning-progress-indicator class="ab" type="path" current-step={selectedStep}>
+            <lightning-progress-step label="Step1" onstepfocus={selectStep1} value="Step1">
+            </lightning-progress-step>
+            <lightning-progress-step label="Step2" onstepfocus={selectStep2} value="Step2">
+            </lightning-progress-step>
+        </lightning-progress-indicator>
+
+</div>
+
+<div class="slds-m-vertical_medium">
+
+<template if:false={isSelectStep2}>
+
+    <lightning-layout>
+
+
+                    <lightning-record-edit-form object-api-name="Account" record-id={recordId}>
+                    <lightning-input-field field-name="Name" onchange={accnamechangehandler} ></lightning-input-field>
+                    
+                    <lightning-input-field field-name="Phone" onchange={accphonechangehandler} required></lightning-input-field>
+                    <lightning-input-field field-name="AccountNumber" onchange={accnumberchangehandler}></lightning-input-field>
+
+                    <lightning-input-field field-name="Description" onchange={accdeschangehandler}></lightning-input-field>
+                    
+                    
+            </lightning-record-edit-form>
+
+            
+                </lightning-layout>
+
+
+   <!-- <lightning-button label="Save" class="slds-m-left_x-small" onclick={saverecord}></lightning-button>  -->
+    <lightning-button label="Back" class="slds-m-left_x-small" onclick={handlePrev}></lightning-button> 
+    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}></lightning-button>
+    
+</template>
+<template if:true={isSelectStep2}>
+    <lightning-layout>
+    <lightning-record-edit-form object-api-name="Account" record-id={recordId}>
+    <lightning-input-field field-name="Type" onchange={acctypechangehandler}  ></lightning-input-field>
+    <lightning-input-field field-name="Rating" onchange={accratingchangehandler}></lightning-input-field>
+    <lightning-input-field field-name="Fax" onchange={accfaxchangehandler}></lightning-input-field>
+
+   </lightning-record-edit-form>
+    </lightning-layout>
+    <lightning-button label="Save" class="slds-m-left_x-small" onclick={saverecord}></lightning-button> 
+   <!-- <lightning-button variant="brand" class="slds-m-left_x-small" label="Finish" onclick={handleFinish}></lightning-button> -->
+</template>
+</div>
+
+
+
+
+        
+    </template>

@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title={cardTitle}>
+        <div class="slds-p-around_small">
+            <lightning-dual-listbox 
+                name="languages"
+                label="Select Records"
+                source-label="Available Records"
+                selected-label="Linked Records"
+                options={options}
+                onchange={handleChange}
+                max={quantity}
+                required-options={reqValue}
+                disable-reordering=true
+            ></lightning-dual-listbox>
+        </div>
+        <div class="slds-p-bottom_medium">
+            <div class="slds-align_absolute-center">
+                &nbsp;&nbsp;&nbsp;
+                <lightning-input name="firstName" class="validate" type="text" label="First Name" value={inpFirstName} onchange={handleFNInput}></lightning-input> &nbsp;&nbsp;&nbsp;
+                <lightning-input name="lastName" class="validate" type="text" label="Last Name" value={inpLastName} onchange={handleLNInput}></lightning-input> &nbsp;&nbsp;&nbsp;
+                <lightning-input type="date" label="Date of Birth" value={inpDOB} onchange={handleDOBInput}></lightning-input> &nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <div class="slds-align_absolute-center">
+            <lightning-button
+                label="Search"
+                icon-name="utility:search"
+                onclick={handleSearch}
+            ></lightning-button>
+        </div>           
+    </lightning-card>
+
+</template>

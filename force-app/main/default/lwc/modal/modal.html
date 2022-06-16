@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Radio Buttons Group Horizontal View in Lightning Web Component"><br/>
+      <div style="margin-left:3%;">
+          <template for:each={options} for:item="item">
+              <fieldset key={item.value} style="display: block; float: left;">
+                  <div class="slds-form-element__control">
+                      <span class="slds-radio">
+                          <input name="radiogroup" id={item.value} type="radio" value={item.value} onchange={handleSelected}/>
+                          <label class="slds-radio__label" for={item.value}>
+                              <span class="slds-radio_faux"></span>
+                              <span class="slds-form-element__label">{item.label}</span>
+                          </label> 
+                      </span>
+                  </div>
+              </fieldset>
+          </template><br/><br/> 
+
+          <div if:true={selectedValue}>
+              Selected Vlaue: <b>{selectedValue}</b>
+          </div>
+      </div>
+
+  </lightning-card>
+</template>

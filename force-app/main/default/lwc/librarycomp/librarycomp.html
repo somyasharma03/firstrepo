@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Choose book Name" icon-name="custom:library__c">
+    
+        <table>
+        <tr>
+        <td>
+        
+        <div class="slds-m-around_medium">
+        <select class="slds-select" onchange={bookOne}>
+        <option>Select library</option>
+        <template for:each ={lii} for:item="item">
+        <option key={item.Id} value={item.Id}>{item.Name}</option>
+        </template>
+        </select>
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+    <div class="slds-m-around_medium">
+    <select class="slds-select" >
+        <option>Select book</option>
+        <template for:each ={bok} for:item="item">
+        <option key={item.Id} value={item.Name}>{item.Name}</option>
+        </template>
+        </select>
+        </div>
+
+        
+        </td>
+        </tr>
+        
+         </table>
+        </lightning-card>
+    
+</template>

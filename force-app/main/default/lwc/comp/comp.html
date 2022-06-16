@@ -1,0 +1,186 @@
+<template> 
+        
+<!-- <div class="slds-theme_default" >
+    <div class="slds-p-around_medium" >
+        <lightning-progress-indicator class="ab" type="path" current-step={selectedStep}>
+            <lightning-progress-step label="Step1" onstepfocus={selectStep1} value="Step1">
+            </lightning-progress-step>
+            <lightning-progress-step label="Step2" onstepfocus={selectStep2} value="Step2">
+            </lightning-progress-step>
+        </lightning-progress-indicator>
+
+</div>
+
+<div class="slds-m-vertical_medium">
+
+<template if:false={isSelectStep2}>
+
+    <lightning-layout>
+<lightning-layout-item size="12"> --> -->
+            
+
+                    <!-- <lightning-record-edit-form object-api-name="Account" record-id={recordId}>
+<lightning-input-field field-name="Name" onchange={accnamechangehandler} ></lightning-input-field>
+                    
+                    <lightning-input-field field-name="Phone" onchange={accphonechangehandler} ></lightning-input-field>
+                    <lightning-input-field field-name="AccountNumber" onchange={accnumberchangehandler}></lightning-input-field>
+
+                    <lightning-input-field field-name="Description" onchange={accdeschangehandler}></lightning-input-field>
+                    
+                    
+            </lightning-record-edit-form>
+
+            
+                </lightning-layout>
+
+
+   <lightning-button label="Save" class="slds-m-left_x-small" onclick={saverecord}></lightning-button> 
+    <lightning-button label="Back" class="slds-m-left_x-small" onclick={handlePrev}></lightning-button> 
+    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}></lightning-button>
+    
+</template>
+<template if:true={isSelectStep2}>
+    <lightning-layout>
+    <lightning-record-edit-form object-api-name="Account" record-id={recordId}>
+    <lightning-input-field field-name="Type" onchange={acctypechangehandler} ></lightning-input-field>
+    <lightning-input-field field-name="Rating" onchange={accratingchangehandler}></lightning-input-field>
+    <lightning-input-field field-name="Fax" onchange={accfaxchangehandler}></lightning-input-field>
+
+   </lightning-record-edit-form>
+    </lightning-layout>
+    <! <lightning-button label="Save" class="slds-m-left_x-small" onclick={saverecord}></lightning-button>  -->
+   <!-- <lightning-button variant="brand" class="slds-m-left_x-small" label="Finish" onclick={handleFinish}></lightning-button> -->
+<!-- </template>
+</div> -->
+        <!-- Body Section  -->
+            <!-- <div class="slds-modal__content slds-p-around_medium">  
+                <center>  
+                <P>Hello guys, welcome to salesforcepoint.com. <br>  
+                    This is the basic lightning web component Modal popup.  
+                </P>  
+                </center>  
+            </div>  -->
+
+            
+                <!-- lightning button for open modal window -->
+                <!-- <lightning-button variant="brand"
+                    label="What is Modal/PopUp in LWC?"
+                    title="What is Modal/PopUp in LWC?"
+                    onclick={openModal}
+                    class="slds-m-left_x-small">
+                </lightning-button> -->
+                <!--Use template if:true to display/hide popup based on isModalOpen value--> 
+                <!-- <template if:true={isModalOpen}>
+                    <!Modal/Popup Box LWC starts here -->
+
+                    <!-- <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                             Modal/Popup Box LWC header here -->
+                            <!-- <header class="slds-modal__header">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                                    <lightning-icon icon-name="utility:close"
+                                        alternative-text="close"
+                                        variant="inverse"
+                                        size="small" ></lightning-icon>
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal/PopUp Box header LWC</h2>
+                            </header> -->
+                            <!-- Modal/Popup Box LWC body starts here -->
+                            <!-- <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <lightning-card title="Radio Buttons Group Horizontal View in Lightning "><br/>
+                                    <template for:each={options} for:item="item">
+                                        <fieldset key={item.value} style="display: block; float: left;">
+                                            <div class="slds-form-element__control">
+                                                <span class="slds-radio">
+                                                    <input name="radiogroup" id={item.value} type="radio" value={item.value} onchange={handleSelected}/>
+                                                    <label class="slds-radio__label" for={item.value}>
+                                                        <span class="slds-radio_faux"></span>
+                                                        <span class="slds-form-element__label">{item.label}</span>
+                                                    </label>
+                                                </span>
+                                                
+                                            </div>
+                                        </fieldset>
+                                    </template>
+                                    </lightning-card>
+                            </div> -->
+                            <!-- Modal/Popup Box LWC footer starts here -->
+                            <!-- <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                                <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">OK</button>
+                                <lightning-button variant="success" label="Navigate To LWC" title="Successful action" onclick={handleNavigate}
+                                class="slds-m-left_x-small"></lightning-button>
+                            
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </template> --> -->
+                 -->
+            
+            <!-- for radio button -->
+            <!-- <lightning-card title="Radio Buttons Group Horizontal View in Lightning "><br/>
+                <template for:each={options} for:item="item">
+                <fieldset key={item.value} style="display: block; float: left;">
+                    <div class="slds-form-element__control">
+                        <span class="slds-radio">
+                            <input name="radiogroup" id={item.value} type="radio" value={item.value} onchange={handleSelected}/>
+                            <label class="slds-radio__label" for={item.value}>
+                                <span class="slds-radio_faux"></span>
+                                <span class="slds-form-element__label">{item.label}</span>
+                            </label>
+                        </span>
+                    </div>
+                </fieldset>
+            </template>
+            </lightning-card>  -->
+
+            <!-- <div if:true={selectedValue}>
+                Selected Vlaue: <b>{selectedValue}</b>
+            </div> -->
+
+            <!-- radio button selection -->
+            <!-- <template if:true={isOption1}>                
+                <div class="slds-m-around_medium slds-text-heading_small">
+                    My conditional display for Option 1
+                </div>
+            </template>
+            <template if:true={isOption2}>                
+                <div class="slds-m-around_medium slds-text-heading_small">
+                    My conditional display for Option 2
+                </div>
+            </template> -->
+        
+                
+            <!-- </div>
+        </template>  -->
+        <lightning-card title="Account List using Apex Wire To Function in Salesfroce" icon-name="custom:custom63">
+            <div class="slds-m-around_medium">
+                <template if:true={accounts}>
+                    <template for:each={accounts} for:item="acc">
+                        <p key={acc.Id}>{acc.Name}</p>
+                    </template>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div>
+        </lightning-card>
+    </template>  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
