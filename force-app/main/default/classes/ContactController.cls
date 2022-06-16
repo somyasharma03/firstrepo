@@ -9,6 +9,7 @@ public with sharing class ContactController {
                        SELECT Id, Name 
                        FROM Contact WHERE Name LIKE:key 
                    ];
+                   system.debug('Hello');
                }
            
            
